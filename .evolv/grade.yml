@@ -1,0 +1,13 @@
+# Exa grading manifest for this Final Assessment coding challenge (Python/FastAPI): best-effort first version, not yet
+# verified in Exa Studio (unverified in Exa). It follows the observed Exa schema
+# (everything under 'test:') and is meant to drive both local Run Tests and grading.
+#
+# ASSUMPTION: no 'image' is declared, so Exa's documented fallback to the project's
+# pinned runtime pack applies. The imported Exa Python template must supply Python 3.12
+# with the packages pinned in starter/requirements.txt already installed: there is no
+# 'setup' step, so nothing is downloaded at test time.
+#
+# The command runs from the repository root and writes one JUnit XML report.
+test:
+  command: "python -m pytest -q --junitxml=test-reports/junit.xml"
+  reports: "test-reports/*.xml"
